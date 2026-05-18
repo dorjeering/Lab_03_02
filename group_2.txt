@@ -1,0 +1,24 @@
+==================================================
+       STUDENTS WITH IDs ENDING IN 4 OR 5
+==================================================
+
+Total number of students found: 6
+
+Names of selected students:
+------------------------------
+  1. Chimi Youden (ID: 08250264)
+  2. Choki Penjor Wangchuk (ID: 08250265)
+  3. Kinga Rinchen (ID: 08250274)
+  4. Lhendup Dorji (ID: 08250275)
+  5. Sonam Tobgay (ID: 08250284)
+  6. Soniya Mongar (ID: 08250285)
+
+--------------------------------------------------
+First Student (by ID):
+  ID   : 08250264
+  Name : Chimi Youden
+
+Last Student (by ID):
+  ID   : 08250285
+  Name : Soniya Mongar
+==================================================

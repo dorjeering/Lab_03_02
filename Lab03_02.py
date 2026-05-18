@@ -79,3 +79,4 @@ with open(output_filename, "w") as out_file:
     out_file.write("\n".join(output_lines))
 
 print(f"\nSuccess! Results saved to '{output_filename}'.")
+print()
