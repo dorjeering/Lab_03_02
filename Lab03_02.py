@@ -35,9 +35,7 @@ for line in data_lines:
             'ID': values[2]
         }
         all_students.append(student)
-<<<<<<< HEAD
-=======
-        #Step 2: and now filter by ID ending in 4 and 5
+#Step 2: and now filter by ID ending in 4 and 5
 group_2_students = [s for s in all_students if s['ID'].endswith('4') or s['ID'].endswith('5')]
 
 #Step 3: Sort by ID 
@@ -81,5 +79,4 @@ with open(output_filename, "w") as out_file:
     out_file.write("\n".join(output_lines))
 
 print(f"\nSuccess! Results saved to '{output_filename}'.")
->>>>>>> aa8476ae9f217c371c92cef19d431b1f9b60003e
 print()
