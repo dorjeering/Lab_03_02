@@ -55,3 +55,27 @@ output_lines = []
 def add_line(text):
     print(text)
     output_lines.append(text)
+add_line("=" * 50)
+add_line("       STUDENTS WITH IDs ENDING IN 4 OR 5")
+add_line("=" * 50)
+add_line(f"\nTotal number of students found: {len(group_2_sorted)}\n")
+
+add_line("Names of selected students:")
+add_line("-" * 30)
+for idx, student in enumerate(group_2_sorted, start=1):
+    add_line(f"  {idx}. {student['Name']} (ID: {student['ID']})")
+
+add_line("\n" + "-" * 50)
+add_line("First Student (by ID):")
+add_line(f"  ID   : {first_student['ID']}")
+add_line(f"  Name : {first_student['Name']}")
+
+add_line("\nLast Student (by ID):")
+add_line(f"  ID   : {last_student['ID']}")
+add_line(f"  Name : {last_student['Name']}")
+add_line("=" * 50)
+
+with open(output_filename, "w") as out_file:
+    out_file.write("\n".join(output_lines))
+
+print(f"\nSuccess! Results saved to '{output_filename}'.")
