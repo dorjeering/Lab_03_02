@@ -35,4 +35,51 @@ for line in data_lines:
             'ID': values[2]
         }
         all_students.append(student)
+<<<<<<< HEAD
+=======
+        #Step 2: and now filter by ID ending in 4 and 5
+group_2_students = [s for s in all_students if s['ID'].endswith('4') or s['ID'].endswith('5')]
+
+#Step 3: Sort by ID 
+group_2_sorted = sorted(group_2_students, key=lambda s: s['ID'])
+
+#Step 4: Identify First and Last 
+if group_2_sorted:
+    first_student = group_2_sorted[0]
+    last_student = group_2_sorted[-1]
+else:
+    print("No students found ending in 4 or 5.")
+    exit()
+
+#Step 5: Display and Save Results 
+output_lines = []
+
+def add_line(text):
+    print(text)
+    output_lines.append(text)
+add_line("=" * 50)
+add_line("       STUDENTS WITH IDs ENDING IN 4 OR 5")
+add_line("=" * 50)
+add_line(f"\nTotal number of students found: {len(group_2_sorted)}\n")
+
+add_line("Names of selected students:")
+add_line("-" * 30)
+for idx, student in enumerate(group_2_sorted, start=1):
+    add_line(f"  {idx}. {student['Name']} (ID: {student['ID']})")
+
+add_line("\n" + "-" * 50)
+add_line("First Student (by ID):")
+add_line(f"  ID   : {first_student['ID']}")
+add_line(f"  Name : {first_student['Name']}")
+
+add_line("\nLast Student (by ID):")
+add_line(f"  ID   : {last_student['ID']}")
+add_line(f"  Name : {last_student['Name']}")
+add_line("=" * 50)
+
+with open(output_filename, "w") as out_file:
+    out_file.write("\n".join(output_lines))
+
+print(f"\nSuccess! Results saved to '{output_filename}'.")
+>>>>>>> aa8476ae9f217c371c92cef19d431b1f9b60003e
 print()
