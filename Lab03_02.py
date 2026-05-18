@@ -35,3 +35,4 @@ for line in data_lines:
             'ID': values[2]
         }
         all_students.append(student)
+print()
